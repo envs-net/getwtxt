@@ -90,13 +90,13 @@ Instance:
   # BehindProxy is set to false, this
   # is also used to map incoming
   # requests.
-  URL: "https://twtxt.example.com"
+  URL: "https://twtxt.evns.net"
 
   # Your name.
-  OwnerName: "Anonymous Microblogger"
+  OwnerName: "ENVS.NET"
 
   # Your email address.
-  Email: "nobody@knows"
+  Email: "hostmaster@envs.net"
 
   # A short description of your instance, or your site.
   # This is shown at the top of the default web page
