@@ -90,7 +90,7 @@ Instance:
   # BehindProxy is set to false, this
   # is also used to map incoming
   # requests.
-  URL: "https://twtxt.evns.net"
+  URL: "https://twtxt.envs.net"
 
   # Your name.
   OwnerName: "ENVS.NET"
