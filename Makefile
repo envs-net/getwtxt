@@ -2,7 +2,7 @@ PREFIX?=/usr/local
 _INSTDIR=$(PREFIX)
 BINDIR?=$(_INSTDIR)/getwtxt
 VERSION?=$(shell git tag | grep ^v | sort -V | tail -n 1)
-GOFLAGS?=-tags netgo -ldflags '-X github.com/getwtxt/getwtxt/svc.Vers=${VERSION} -extldflags "-static"'
+GOFLAGS?=-ldflags '-X github.com/getwtxt/getwtxt/svc.Vers=${VERSION}'
 
 getwtxt: getwtxt.go go.mod go.sum
 	@echo
@@ -79,5 +79,7 @@ uninstall:
 	@echo
 	@echo Removing user
 	- userdel getwtxt
+	@echo
+	@echo The database is still intact in /usr/local/getwtxt/
 	@echo
 	@echo ...Done\!
