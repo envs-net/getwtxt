@@ -16,6 +16,7 @@ getwtxt: getwtxt.go go.mod go.sum
 clean:
 	@echo
 	@echo Cleaning build and module caches...
+	go clean
 	go clean -cache -modcache
 	@echo
 	@echo ...Done\!
@@ -39,13 +40,14 @@ install:
 	@echo
 	@echo
 	@echo Creating directories...
-	mkdir -p $(BINDIR)/assets/tmpl $(BINDIR)/docs $(BINDIR)/logs
+	mkdir -p $(BINDIR)/assets/tmpl $(BINDIR)/docs $(BINDIR)/logs $(BINDIR)/static
 	@echo
 	@echo Copying files...
 	install -m755 getwtxt $(BINDIR)
 	install -m644 getwtxt.yml $(BINDIR)
 	install -m644 assets/style.css $(BINDIR)/assets
 	install -m644 assets/tmpl/index.html $(BINDIR)/assets/tmpl
+	install -m644 static/kognise.water.css.dark.min.css $(BINDIR)/static
 	install -m644 README.md $(BINDIR)/docs
 	install -m644 LICENSE $(BINDIR)/docs
 	install -m644 etc/getwtxt.service /etc/systemd/system
